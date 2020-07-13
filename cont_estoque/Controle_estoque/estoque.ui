@@ -54,84 +54,14 @@ border: 2px solid red;</string>
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>540</x>
-     <y>440</y>
-     <width>151</width>
-     <height>31</height>
+     <x>570</x>
+     <y>450</y>
+     <width>75</width>
+     <height>23</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Algerian</family>
-     <pointsize>20</pointsize>
-    </font>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">color:#000;
-background-color:#fff;
-border-radius:40px;
-border: 2px  solid red;</string>
    </property>
    <property name="text">
-    <string>Registrar</string>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="LN_usuario">
-   <property name="geometry">
-    <rect>
-     <x>76</x>
-     <y>1</y>
-     <width>150</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLineEdit" name="LN_senha">
-   <property name="geometry">
-    <rect>
-     <x>290</x>
-     <y>1</y>
-     <width>150</width>
-     <height>20</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LB_usuario">
-   <property name="geometry">
-    <rect>
-     <x>12</x>
-     <y>6</y>
-     <width>71</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Algerian</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Usuário</string>
-   </property>
-  </widget>
-  <widget class="QLabel" name="LB_senha">
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>7</y>
-     <width>51</width>
-     <height>16</height>
-    </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Algerian</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>Senha</string>
+    <string>PushButton</string>
    </property>
   </widget>
  </widget>
