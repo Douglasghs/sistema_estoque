@@ -18,6 +18,8 @@ public:
 private slots:
     void on_pushButton_4_clicked();
 
+    void on_PB_registar_clicked();
+
 private:
     Ui::conferir *ui;
 };

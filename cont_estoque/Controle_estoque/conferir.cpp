@@ -33,6 +33,7 @@ conferir::~conferir()
 
 void conferir::on_pushButton_4_clicked()
 {
+    ui->tableWidget->clear();
     QSqlQuery query;
     query.prepare("select * from produtos");
     if(!query.exec())
@@ -54,5 +55,30 @@ void conferir::on_pushButton_4_clicked()
             ui->tableWidget->setRowHeight(cont,20);
             cont++;
         }
+    }
+}
+
+void conferir::on_PB_registar_clicked()
+{
+    QString tipo= ui->LE_produto->text();
+    QString marca = ui->LE_marca->text();
+    QString quantidade= ui->LN_quantidade->text();
+    QString validade= ui->LN_validade->text();
+
+    QSqlQuery query;
+    query.prepare("insert into produtos(tipo,marca,quantidade,validade) values('"+tipo+"','"+marca+"','"+quantidade+"','"+validade+"')");
+    if(!query.exec())
+    {
+        qDebug("query de registramento n executada");
+        return;
+    }
+    else
+    {
+        QMessageBox::about(this,"SUCESSO","Produto armazenado com sucesso");
+        ui->LE_produto->clear();
+        ui->LE_marca->clear();
+        ui->LN_validade->clear();
+        ui->LN_quantidade->clear();
+        ui->LE_produto->setFocus();
     }
 }
