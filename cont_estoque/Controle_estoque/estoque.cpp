@@ -26,6 +26,7 @@ estoque::~estoque()
 
 void estoque::on_pushButton_clicked()
 {
+    this->close();
     conferir form;
     form.exec();
 }

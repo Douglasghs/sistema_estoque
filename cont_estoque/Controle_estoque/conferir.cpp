@@ -30,3 +30,29 @@ conferir::~conferir()
 {
     delete ui;
 }
+
+void conferir::on_pushButton_4_clicked()
+{
+    QSqlQuery query;
+    query.prepare("select * from produtos");
+    if(!query.exec())
+    {
+        qDebug("query selecionar todos n rodou");
+        return;
+    }
+    else
+    {
+        int cont=0;
+        ui->tableWidget->setColumnCount(4);
+        while(query.next())
+        {
+            ui->tableWidget->insertRow(cont);
+            ui->tableWidget->setItem(cont,0,new QTableWidgetItem(query.value(0).toString()));
+            ui->tableWidget->setItem(cont,1,new QTableWidgetItem(query.value(1).toString()));
+            ui->tableWidget->setItem(cont,2,new QTableWidgetItem(query.value(2).toString()));
+            ui->tableWidget->setItem(cont,3,new QTableWidgetItem(query.value(3).toString()));
+            ui->tableWidget->setRowHeight(cont,20);
+            cont++;
+        }
+    }
+}

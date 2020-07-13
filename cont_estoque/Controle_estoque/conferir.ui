@@ -218,17 +218,14 @@
     <string>Ver Todos</string>
    </property>
   </widget>
-  <widget class="QTextEdit" name="textEdit">
+  <widget class="QTableWidget" name="tableWidget">
    <property name="geometry">
     <rect>
      <x>11</x>
-     <y>322</y>
+     <y>310</y>
      <width>840</width>
-     <height>170</height>
+     <height>180</height>
     </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">border:3px solid </string>
    </property>
   </widget>
  </widget>
