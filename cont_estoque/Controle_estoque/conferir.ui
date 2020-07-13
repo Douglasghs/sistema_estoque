@@ -222,10 +222,26 @@
    <property name="geometry">
     <rect>
      <x>11</x>
-     <y>310</y>
+     <y>316</y>
      <width>840</width>
-     <height>180</height>
+     <height>150</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid </string>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>11</x>
+     <y>465</y>
+     <width>840</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border: 2px solid ;</string>
    </property>
   </widget>
  </widget>

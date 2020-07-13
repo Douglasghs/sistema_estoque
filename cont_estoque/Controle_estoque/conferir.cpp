@@ -38,13 +38,13 @@ void conferir::on_pushButton_4_clicked()
     query.prepare("select * from produtos");
     if(!query.exec())
     {
-        qDebug("query selecionar todos n rodou");
+        ui->textEdit->setText("Query selecionar todos n rodou");
         return;
     }
     else
     {
         int cont=0;
-        ui->tableWidget->setColumnCount(4);
+        ui->tableWidget->setColumnCount(5);
         while(query.next())
         {
             ui->tableWidget->insertRow(cont);
@@ -52,6 +52,7 @@ void conferir::on_pushButton_4_clicked()
             ui->tableWidget->setItem(cont,1,new QTableWidgetItem(query.value(1).toString()));
             ui->tableWidget->setItem(cont,2,new QTableWidgetItem(query.value(2).toString()));
             ui->tableWidget->setItem(cont,3,new QTableWidgetItem(query.value(3).toString()));
+            ui->tableWidget->setItem(cont,4,new QTableWidgetItem(query.value(4).toString()));
             ui->tableWidget->setRowHeight(cont,20);
             cont++;
         }
@@ -69,16 +70,38 @@ void conferir::on_PB_registar_clicked()
     query.prepare("insert into produtos(tipo,marca,quantidade,validade) values('"+tipo+"','"+marca+"','"+quantidade+"','"+validade+"')");
     if(!query.exec())
     {
-        qDebug("query de registramento n executada");
+        ui->textEdit->setText("Query de registramento n executada");
         return;
     }
     else
     {
-        QMessageBox::about(this,"SUCESSO","Produto armazenado com sucesso");
+        ui->textEdit->clear();
+        ui->textEdit->setText("Produto armazenado com sucesso");
         ui->LE_produto->clear();
         ui->LE_marca->clear();
         ui->LN_validade->clear();
         ui->LN_quantidade->clear();
         ui->LE_produto->setFocus();
+        return;
+    }
+}
+
+void conferir::on_pushButton_3_clicked()
+{
+    QString marca= ui->LE_marca->text();
+    QSqlQuery query;
+    query.prepare("delete from produtos where marca='"+marca+"'");
+    if(!query.exec())
+    {
+        ui->textEdit->setText("Query de delete n executada");
+        ui->LE_marca->clear();
+        return;
+    }
+    else
+    {
+        ui->textEdit->setText("Produto removido com sucesso");
+        ui->LE_marca->clear();
+        return;
+
     }
 }
