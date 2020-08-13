@@ -42,10 +42,9 @@
     </font>
    </property>
    <property name="styleSheet">
-    <string notr="true">color:#000;
-background-color:#fff;
-border-radius:40px;
-border: 2px solid red;</string>
+    <string notr="true">border-radius:15px;
+background: #808080;
+border: 1px solid #00BFFF;</string>
    </property>
    <property name="text">
     <string>Entrar</string>

@@ -88,20 +88,21 @@ void conferir::on_PB_registar_clicked()
 
 void conferir::on_pushButton_3_clicked()
 {
-    QString marca= ui->LE_marca->text();
+    QString id= ui->LN_id->text();
     QSqlQuery query;
-    query.prepare("delete from produtos where marca='"+marca+"'");
-    if(!query.exec())
-    {
-        ui->textEdit->setText("Query de delete n executada");
-        ui->LE_marca->clear();
-        return;
-    }
-    else
-    {
-        ui->textEdit->setText("Produto removido com sucesso");
-        ui->LE_marca->clear();
-        return;
-
+    if(id != NULL){
+    query.prepare("delete from produtos where id='"+id+"'");
+      if(!query.exec()){
+          ui->textEdit->setText("Query de delete n executada");
+          ui->LN_id->clear();
+          return;
+      }
+      else{
+          ui->textEdit->setText("Produto removido com sucesso");
+          ui->LN_id->clear();
+          return;
+      }
+    } else {
+        ui->textEdit->setText("Preencha o campo da marca");
     }
 }

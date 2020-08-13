@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>863</width>
-    <height>500</height>
+    <width>859</width>
+    <height>506</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -21,6 +21,10 @@
      <width>931</width>
      <height>600</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+border: 1px solid red;</string>
    </property>
    <property name="text">
     <string>TextLabel</string>
@@ -54,6 +58,10 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border : 1px solid red;
+border-radius: 10px;</string>
+   </property>
   </widget>
   <widget class="QLabel" name="LB_marca">
    <property name="geometry">
@@ -82,6 +90,10 @@
      <width>430</width>
      <height>20</height>
     </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+border: 1px solid red;</string>
    </property>
   </widget>
   <widget class="QLabel" name="LB_quatidade">
@@ -112,6 +124,10 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+border: 1px solid red;</string>
+   </property>
   </widget>
   <widget class="QLabel" name="LB_validade">
    <property name="geometry">
@@ -141,6 +157,10 @@
      <height>20</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+border: 1px solid red;</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="PB_registar">
    <property name="geometry">
@@ -156,6 +176,11 @@
      <family>Algerian</family>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:20px;
+background: #808080;
+border: 1px solid #00BFFF;</string>
    </property>
    <property name="text">
     <string>Registrar</string>
@@ -176,6 +201,11 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:20px;
+background: #808080;
+border: 1px solid #00BFFF;</string>
+   </property>
    <property name="text">
     <string>Editar</string>
    </property>
@@ -194,6 +224,11 @@
      <family>Algerian</family>
      <pointsize>10</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:20px;
+background: #808080;
+border: 1px solid #00BFFF;</string>
    </property>
    <property name="text">
     <string>Deletar</string>
@@ -214,6 +249,11 @@
      <pointsize>10</pointsize>
     </font>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius:20px;
+background: #808080;
+border: 1px solid #00BFFF;</string>
+   </property>
    <property name="text">
     <string>Ver Todos</string>
    </property>
@@ -228,7 +268,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border: 2px solid </string>
+    <string notr="true">border: 1px solid </string>
    </property>
   </widget>
   <widget class="QTextEdit" name="textEdit">
@@ -237,11 +277,47 @@
      <x>11</x>
      <y>465</y>
      <width>840</width>
-     <height>30</height>
+     <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border: 2px solid ;</string>
+    <string notr="true">border: 1px solid black ;
+color: red;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>73</x>
+     <y>140</y>
+     <width>20</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Algerian</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>ID</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="LN_id">
+   <property name="geometry">
+    <rect>
+     <x>90</x>
+     <y>140</y>
+     <width>113</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">border-radius: 10px;
+border: 1px solid red;</string>
    </property>
   </widget>
  </widget>
